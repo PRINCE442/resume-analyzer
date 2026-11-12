@@ -2,6 +2,10 @@
 
 Upload a PDF resume and get an honest quality score, specific feedback, a job match check, and a tailored cover letter in seconds. Built with **React**, **FastAPI**, **LangChain**, and **Google Gemini**.
 
+**🔗 Live demo: [resume-analyzer-u6to.onrender.com](https://resume-analyzer-u6to.onrender.com)**
+
+> Hosted on Render's free tier: if nobody has used it for a while, the first load can take up to a minute while the server wakes up.
+
 ![Analysis results in dark mode](docs/screenshots/results-dark.png)
 
 ## Features
@@ -116,6 +120,15 @@ docker run -p 8000:8000 --env-file .env resume-analyzer
 ```
 
 Open **http://localhost:8000**.
+
+### Deploy to Render
+
+The live demo runs on [Render](https://render.com) using the `Dockerfile`:
+
+1. **New + → Web Service** and connect this GitHub repository.
+2. Render detects the Dockerfile automatically (**Language: Docker**).
+3. Under **Environment Variables**, add `GEMINI_API_KEY`.
+4. Deploy. Every push to `main` redeploys automatically.
 
 ## Environment variables
 
